@@ -5,7 +5,7 @@ import React from "react";
 // import CountryPicker from "./components/country-picker/CountryPicker";
 // OR
 // use this method which requires a new index.js file inside components folder
-import { Cards, Chart, CountryPicker } from "./components";
+import { Info, Chart, CountryPicker } from "./components";
 import { fetchData } from "./api"; // by default in any folder the imported function is searched in index.js file for every folder.
 
 import styles from "./App.module.css";
@@ -32,7 +32,7 @@ class App extends React.Component {
     const { data, country } = this.state;
     return (
       <div className={styles.container}>
-        <Cards data={data} />
+        <Info data={data} />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Chart data={data} country={country} />
       </div>
